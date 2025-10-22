@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Đăng nhập quản trị — Cầm Không Hối Hận</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="login-page">
+    <div class="login-box">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png"
+        alt="logo"
+      />
+      <h2>Đăng nhập khu vực quản trị</h2>
+
+      <form id="adminLoginForm" class="form-login">
+        <label for="username">Tên đăng nhập</label>
+        <input id="username" type="text" placeholder="admin" required />
+
+        <label for="password">Mật khẩu</label>
+        <input id="password" type="password" placeholder="••••••" required />
+
+        <button type="submit" class="btn">Đăng nhập</button>
+        <p id="login-message" class="message"></p>
+      </form>
+
+      <div class="login-footer">
+        <p><small>© 2025 Cầm Không Hối Hận — Khu vực quản trị</small></p>
+        <p><a href="dashboard.html">Về trang chủ</a></p>
+      </div>
+    </div>
+
+    <script src="admin-final.js"></script>
+
+  </body>
+</html>

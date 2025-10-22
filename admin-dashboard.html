@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Dashboard — Cầm Không Hối Hận</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar & header injected by admin.js -->
+    <div class="admin-wrapper content-wrapper">
+      <main class="admin-content">
+        <div class="dashboard-top">
+          <h2>Chào mừng đến trang quản trị</h2>
+          <p class="muted">Tổng quan nhanh các chỉ số của hệ thống</p>
+        </div>
+
+        <div class="summary-cards">
+          <div class="card">
+            <h3>Khách hàng</h3>
+            <p class="stat" id="stat-customers">—</p>
+          </div>
+          <div class="card">
+            <h3>Hợp đồng đang hoạt động</h3>
+            <p class="stat" id="stat-contracts">—</p>
+          </div>
+          <div class="card">
+            <h3>Đến hạn (7 ngày)</h3>
+            <p class="stat" id="stat-dues">—</p>
+          </div>
+          <div class="card">
+            <h3>Quá hạn</h3>
+            <p class="stat" id="stat-overdue">—</p>
+          </div>
+        </div>
+
+        <section>
+          <h3>Bảng hợp đồng mới nhất</h3>
+          <table class="report-table" id="recent-contracts">
+            <thead>
+              <tr>
+                <th>Mã HĐ</th>
+                <th>Khách hàng</th>
+                <th>Tài sản</th>
+                <th>Đến hạn</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- filled by admin.js -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+<script src="admin-final.js"></script>
+
+
+  </body>
+</html>

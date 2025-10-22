@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Thu / Chuộc — Admin</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="admin-wrapper content-wrapper">
+      <main class="admin-content">
+        <h2>Ghi nhận giao dịch — Thu lãi / Chuộc đồ</h2>
+
+        <form id="form-payment" class="contract-form">
+          <label>Mã hợp đồng</label>
+          <input
+            name="contractId"
+            type="text"
+            placeholder="Nhập mã HĐ (VD: CT-1234)"
+            required
+          />
+
+          <div id="contract-info" class="info-box" style="display: none">
+            <p><strong>Khách hàng:</strong> <span id="info-customer"></span></p>
+            <p><strong>Tài sản:</strong> <span id="info-asset"></span></p>
+            <p><strong>Giá trị:</strong> <span id="info-value"></span></p>
+            <p><strong>Ngày cầm:</strong> <span id="info-start"></span></p>
+            <p><strong>Đến hạn:</strong> <span id="info-due"></span></p>
+            <p>
+              <strong>Số ngày đã cầm:</strong> <span id="info-days"></span> ngày
+            </p>
+            <p>
+              <strong>Lãi dự kiến:</strong> <span id="info-interest"></span>
+            </p>
+          </div>
+
+          <label>Loại giao dịch</label>
+          <select name="type" required>
+            <option>Thu lãi</option>
+            <option>Chuộc</option>
+          </select>
+
+          <label>Số tiền (VNĐ)</label>
+          <input
+            name="amount"
+            type="number"
+            placeholder="Nhập hoặc hệ thống tự gợi ý"
+            required
+          />
+
+          <label>Ghi chú</label>
+          <input name="note" type="text" placeholder="VD: Thu lãi tháng 10" />
+
+          <button class="btn" type="submit">💾 Ghi nhận</button>
+          <p id="payment-msg" class="message"></p>
+        </form>
+
+        <h3 style="margin-top: 30px">Lịch sử giao dịch gần đây</h3>
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>Mã GD</th>
+              <th>HĐ</th>
+              <th>Khách</th>
+              <th>Loại</th>
+              <th>Ngày</th>
+              <th>Số tiền</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </main>
+    </div>
+
+    <script src="admin-final.js"></script>
+  </body>
+</html>
