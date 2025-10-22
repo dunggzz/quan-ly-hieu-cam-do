@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tạo hợp đồng mới — Admin</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-wrapper content-wrapper">
+      <main class="admin-content">
+        <h2>Tạo hợp đồng mới</h2>
+
+        <form id="form-new-contract" class="contract-form">
+          <label>Họ tên khách hàng</label>
+          <input name="customer" type="text" required />
+
+          <label>Số điện thoại khách hàng</label>
+          <input name="phone" type="tel" required />
+
+          <label>Tài sản cầm</label>
+          <select name="asset" required>
+            <option value="">-- Chọn loại tài sản --</option>
+            <option value="Ô tô">Ô tô</option>
+            <option value="Xe máy">Xe máy</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Điện thoại">Điện thoại</option>
+            <option value="Sổ đỏ">Sổ đỏ</option>
+            <option value="Trang sức">Trang sức</option>
+            <option value="Khác">Khác</option>
+          </select>
+
+          <label>Giá trị định giá (VNĐ)</label>
+          <input name="value" type="number" required />
+
+          <label>Ngày cầm</label>
+          <input name="startDate" type="date" required />
+
+          <label>Ngày đến hạn</label>
+          <input name="dueDate" type="date" required />
+
+          <button class="btn" type="submit">Tạo hợp đồng</button>
+          <p id="contract-msg" class="message"></p>
+        </form>
+      </main>
+    </div>
+
+    <script src="admin-final.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Khách hàng — Admin</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-wrapper content-wrapper">
+      <main class="admin-content">
+        <h2>Quản lý khách hàng</h2>
+        <p class="muted">Danh sách khách hàng, tìm kiếm và thao tác nhanh.</p>
+
+        <div class="table-actions">
+          <input
+            id="search-customer"
+            type="search"
+            placeholder="Tìm khách hàng..."
+          />
+          <button id="btn-add-customer" class="btn small">
+            Thêm khách hàng
+          </button>
+        </div>
+
+        <table class="report-table" id="customers-table">
+          <thead>
+            <tr>
+              <th>Mã KH</th>
+              <th>Họ tên</th>
+              <th>SĐT</th>
+              <th>CMND/CCCD</th>
+              <th>Hợp đồng</th>
+              <th>Trạng thái</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </main>
+    </div>
+
+    <script src="admin-final.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard — Hiệu Cầm Đồ Cầm Không Hối Hận</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #2b9ed8;
+        --accent-dark: #1b75b5;
+        --bg: #f6fbff;
+        --text: #0b3040;
+      }
+
+      * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      header {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: var(--accent);
+      }
+
+      header p {
+        color: #555;
+        margin-top: 6px;
+      }
+
+      main {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .dashboard-grid {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 60px;
+      }
+
+      .dashboard-card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+        width: 300px;
+        text-align: center;
+        padding: 30px 20px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .dashboard-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+      }
+
+      .dashboard-card img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 14px;
+      }
+
+      .dashboard-card h2 {
+        color: var(--accent);
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+
+      .dashboard-card p {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      section {
+        margin: 60px auto;
+        max-width: 900px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      section h2 {
+        color: var(--accent-dark);
+        font-size: 1.5rem;
+        margin-bottom: 14px;
+        text-align: center;
+      }
+
+      section p {
+        color: #444;
+        line-height: 1.7;
+        text-align: center;
+      }
+
+      .process-steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .step {
+        flex: 1;
+        min-width: 200px;
+        background: var(--bg);
+        border-left: 5px solid var(--accent);
+        padding: 20px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .step:hover {
+        transform: translateY(-4px);
+        background: #e8f6ff;
+      }
+
+      .step h3 {
+        color: var(--accent-dark);
+        margin-bottom: 8px;
+      }
+
+      .testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .testimonial {
+        background: #f9fcff;
+        border-left: 5px solid var(--accent);
+        border-radius: 12px;
+        padding: 20px;
+        width: 260px;
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .testimonial p {
+        font-style: italic;
+      }
+
+      .testimonial strong {
+        color: var(--accent-dark);
+      }
+
+      footer {
+        background: #fff;
+        text-align: center;
+        padding: 18px;
+        font-size: 0.9rem;
+        color: #666;
+        border-top: 1px solid #e8f3f9;
+      }
+
+      @media (max-width: 700px) {
+        .dashboard-card {
+          width: 90%;
+        }
+
+        .process-steps {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .fade {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.6s ease;
+      }
+
+      .fade.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>💎 Dashboard — Hiệu Cầm Đồ Cầm Không Hối Hận</h1>
+      <p>Uy tín – Minh bạch – Rõ ràng – An tâm tuyệt đối cho khách hàng</p>
+    </header>
+
+    <main>
+      <div class="dashboard-grid fade">
+        <a href="index.html" class="dashboard-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2950/2950658.png"
+            alt="Khu vực khách hàng"
+          />
+          <h2>🙋‍♂️ Khu vực Khách hàng</h2>
+          <p>
+            Tra cứu hợp đồng, nhận hỗ trợ trực tuyến và xem toàn bộ quy trình
+            cầm đồ rõ ràng, minh bạch.
+          </p>
+        </a>
+
+        <a href="admin-login.html" class="dashboard-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/992/992700.png"
+            alt="Khu vực quản trị"
+          />
+          <h2>🧭 Khu vực Quản trị</h2>
+          <p>
+            Quản lý khách hàng, hợp đồng và tài sản dễ dàng, đảm bảo tính minh
+            bạch trong mọi giao dịch.
+          </p>
+        </a>
+      </div>
+
+      <!-- Mảng: Uy tín & Cam kết -->
+      <section id="trust" class="fade">
+        <h2>🌟 Cam kết Uy tín & Minh bạch</h2>
+        <p>
+          Chúng tôi luôn đặt chữ <strong>“Tín”</strong> lên hàng đầu. Mọi quy
+          trình thẩm định, định giá, và giải ngân đều được công khai, minh bạch,
+          giúp khách hàng <strong>yên tâm tuyệt đối</strong>.
+        </p>
+        <p>
+          Thông tin hợp đồng được lưu trữ bảo mật, khách hàng có thể tra cứu mọi
+          lúc, mọi nơi. Không phí ẩn, không lãi suất mập mờ — chỉ sự rõ ràng và
+          tận tâm.
+        </p>
+      </section>
+
+      <!-- Mảng: Quy trình minh bạch -->
+      <section id="process" class="fade">
+        <h2>⚙️ Quy trình cầm đồ minh bạch 4 bước</h2>
+        <div class="process-steps">
+          <div class="step">
+            <h3>1️⃣ Tiếp nhận tài sản</h3>
+            <p>
+              Nhân viên tiếp nhận và kiểm tra tình trạng tài sản một cách khách
+              quan.
+            </p>
+          </div>
+          <div class="step">
+            <h3>2️⃣ Định giá công khai</h3>
+            <p>
+              Đưa ra mức giá cầm hợp lý, rõ ràng, khách hàng được quyền đối
+              chiếu.
+            </p>
+          </div>
+          <div class="step">
+            <h3>3️⃣ Ký hợp đồng</h3>
+            <p>
+              Hợp đồng cầm đồ minh bạch với đầy đủ thông tin, điều khoản rõ
+              ràng.
+            </p>
+          </div>
+          <div class="step">
+            <h3>4️⃣ Giải ngân nhanh chóng</h3>
+            <p>
+              Nhận tiền ngay sau khi hoàn tất ký hợp đồng. Bảo mật tuyệt đối.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mảng: Phản hồi khách hàng -->
+      <section id="feedback" class="fade">
+        <h2>💬 Phản hồi từ khách hàng</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <p>
+              “Tôi rất ấn tượng vì mọi thủ tục đều minh bạch, rõ ràng. Nhân viên
+              thân thiện và hỗ trợ nhanh chóng.”
+            </p>
+            <strong>– Anh Minh (Tây Hồ)</strong>
+          </div>
+          <div class="testimonial">
+            <p>
+              “Cầm laptop mà nhận tiền chỉ trong 10 phút. Mức lãi suất hợp lý,
+              lại có thể tra cứu hợp đồng online.”
+            </p>
+            <strong>– Chị Hạnh (Cầu Giấy)</strong>
+          </div>
+          <div class="testimonial">
+            <p>
+              “Tôi từng lo ngại cầm đồ phức tạp, nhưng ở đây mọi thứ rõ ràng và
+              chuyên nghiệp. Sẽ giới thiệu bạn bè!”
+            </p>
+            <strong>– Anh Long (Thanh Xuân)</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Hiệu Cầm Đồ Cầm Không Hối Hận • Nơi bạn gửi trọn niềm tin
+    </footer>
+
+    <script>
+      // Hiệu ứng xuất hiện dần khi cuộn
+      const fadeEls = document.querySelectorAll(".fade");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      fadeEls.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

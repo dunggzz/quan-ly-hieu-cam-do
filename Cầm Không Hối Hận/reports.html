@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Báo cáo — Admin</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-wrapper content-wrapper">
+      <main class="admin-content">
+        <h2>📈 Báo cáo hệ thống</h2>
+
+        <div class="summary-cards">
+          <div class="card">
+            <h3>Hợp đồng đang hoạt động</h3>
+            <p class="stat">—</p>
+          </div>
+          <div class="card">
+            <h3>Đến hạn trong 7 ngày</h3>
+            <p class="stat">—</p>
+          </div>
+          <div class="card">
+            <h3>Quá hạn</h3>
+            <p class="stat">—</p>
+          </div>
+        </div>
+
+        <section>
+          <h3>Hợp đồng sắp đến hạn</h3>
+          <table class="report-table" id="dueSoonTable">
+            <thead>
+              <tr>
+                <th>Mã HĐ</th>
+                <th>Khách hàng</th>
+                <th>Tài sản</th>
+                <th>Ngày cầm</th>
+                <th>Ngày đến hạn</th>
+                <th>Số ngày còn lại</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <section>
+          <h3 style="margin-top: 30px">Hợp đồng quá hạn</h3>
+          <table class="report-table" id="overdueTable">
+            <thead>
+              <tr>
+                <th>Mã HĐ</th>
+                <th>Khách hàng</th>
+                <th>Tài sản</th>
+                <th>Ngày cầm</th>
+                <th>Ngày đến hạn</th>
+                <th>Số ngày trễ</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="admin-final.js"></script>
+
+  </body>
+</html>
