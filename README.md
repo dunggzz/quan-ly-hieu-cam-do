@@ -52,5 +52,3 @@ Trang web cung cấp giao diện thân thiện, dễ sử dụng, phục vụ ch
 
 ---
 
-## 📁 Cấu trúc thư mục mẫu
-
